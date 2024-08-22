@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: "Nunito", sans-serif;
+}
+
+.custom-gradient {
+    background: linear-gradient(to top, #111111 58%, #3F0F0C 100%);
+}
