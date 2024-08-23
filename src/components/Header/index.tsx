@@ -28,10 +28,10 @@ const Header: React.FC<HeaderProps> = ({ changeMode, homeClass }) => {
                 <h1 className="text-[48px] p-3 font-black max-w-[120px] rounded-lg bg-solidcomponents text-colorfont">AR</h1>
 
                 <nav className="hidden md:flex space-x-8">
-                    <a href="#" className="hover:text-red-500">Home</a>
-                    <a href="#" className="hover:text-red-500">Trajetória</a>
-                    <a href="#" className="hover:text-red-500">Portfólio</a>
-                    <a href="#" className="hover:text-red-500">Contato</a>
+                    <a href="#" className="hover:text-red-500 font-medium text-2xl">Home</a>
+                    <a href="#" className="hover:text-red-500 font-medium text-2xl">Trajetória</a>
+                    <a href="#" className="hover:text-red-500 font-medium text-2xl">Portfólio</a>
+                    <a href="#" className="hover:text-red-500 font-medium text-2xl">Contato</a>
                 </nav>
 
                 <Button onClick={toggleMode} className='hidden md:flex'>
