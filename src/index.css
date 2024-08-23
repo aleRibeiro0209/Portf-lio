@@ -6,6 +6,12 @@ body {
     font-family: "Nunito", sans-serif;
 }
 
-.custom-gradient {
+.custom-gradient-light {
+    background: linear-gradient(to top, #FFFFFF 0%, #FFEAE7 100%);
+    color: #000000;
+}
+
+.custom-gradient-dark {
     background: linear-gradient(to top, #111111 58%, #3F0F0C 100%);
+    color: #FFF7F6;
 }
