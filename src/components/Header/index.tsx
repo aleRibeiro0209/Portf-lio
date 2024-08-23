@@ -9,6 +9,7 @@ interface HeaderProps {
     homeClass: string;
 };
 
+
 const Header: React.FC<HeaderProps> = ({ changeMode, homeClass }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [mode, setMode] = useState(false);
@@ -19,7 +20,7 @@ const Header: React.FC<HeaderProps> = ({ changeMode, homeClass }) => {
 
     const toggleMode = () => {
         setMode(!mode);
-        changeMode( homeClass === "w-dvw h-dvh custom-gradient-dark py-[24px]" ? "w-dvw h-dvh custom-gradient-light py-[24px]" : "w-dvw h-dvh custom-gradient-dark py-[24px]");
+        changeMode( homeClass === "w-full custom-gradient-dark py-[24px]" ? "w-full custom-gradient-light py-[24px]" : "w-full custom-gradient-dark py-[24px]");
     };
 
     return (

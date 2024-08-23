@@ -6,7 +6,7 @@ interface SectionProps {
 
 const Section: React.FC<SectionProps> = ({ children }) => {
   return (
-    <section className="container mx-auto px-6 py-16 max-w-[1200px] flex flex-wrap-reverse gap-6 justify-center">
+    <section className="container mx-auto px-6 py-16 max-w-[1200px] flex flex-wrap-reverse gap-6 justify-center xl:justify-start">
         {children}
     </section>
   );
