@@ -8,6 +8,7 @@ import Perfil from "../../assets/perfil.jpg"
 import { Download, Github, Linkedin, Mail } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import ProgressBar from "../../components/ProgressBar";
 
 const Home = () => {
   const [homeClass, setHomeClass] = useState('w-full custom-gradient-dark py-[24px]');
@@ -36,17 +37,25 @@ const Home = () => {
                 <a href="mailto:alexandreribeiro0209@gmail.com" target="_blank"><Mail size={40}/></a>
               </Button>
               <Button>
-                <a href="https://web.whatsapp.com/send?phone=5511914788477" target="_blank"><FontAwesomeIcon icon={faWhatsapp} className="text-[45px]" /></a>
+                <a href="https://wa.me/qr/DBGRL5SIW725G1" target="_blank"><FontAwesomeIcon icon={faWhatsapp} className="text-[45px]" /></a>
               </Button>
             </div>
           </div>
           <img src={Perfil} alt="Imagem de Alexandre Ribeiro" className="max-w-[500px] max-h-[500px] w-full lg:w-1/2 rounded-[24px]"/>
       </Section>
       <Section>
-        <Title content="Principais Tecnologias" />
+        <div className="w-full flex flex-col gap-[2rem]">
+          <Title content="Principais Tecnologias" />
+          <ProgressBar label="PHP" percent="before:w-[80%]" />
+          <ProgressBar label="JavaScript" percent="before:w-[70%]" />
+          <ProgressBar label="React" percent="before:w-[30%]" />
+          <ProgressBar label="Git" percent="before:w-[60%]" />
+        </div>
       </Section>
       <Section>
-        <Title content="Formação" />
+        <div className="w-full flex flex-col gap-[2rem]">
+          <Title content="Formação" />
+        </div>
       </Section>
     </div>
   );
