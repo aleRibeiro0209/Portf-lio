@@ -30,9 +30,9 @@ const Header: React.FC<HeaderProps> = ({ changeMode, homeClass }) => {
 
                 <nav className="hidden md:flex space-x-8">
                     <a href="#" className="hover:text-red-500 font-medium text-2xl">Home</a>
-                    <a href="#" className="hover:text-red-500 font-medium text-2xl">Trajetória</a>
-                    <a href="#" className="hover:text-red-500 font-medium text-2xl">Portfólio</a>
-                    <a href="#" className="hover:text-red-500 font-medium text-2xl">Contato</a>
+                    <a href="#trajetoria" className="hover:text-red-500 font-medium text-2xl">Trajetória</a>
+                    <a href="#projetos" className="hover:text-red-500 font-medium text-2xl">Portfólio</a>
+                    <a href="contato" className="hover:text-red-500 font-medium text-2xl">Contato</a>
                 </nav>
 
                 <Button onClick={toggleMode} className='hidden md:flex'>
@@ -47,9 +47,9 @@ const Header: React.FC<HeaderProps> = ({ changeMode, homeClass }) => {
             {isOpen && (
                 <nav className="md:hidden mt-4 space-y-4 text-center flex flex-col items-center">
                     <a href="#" className="hover:text-red-600">Home</a>
-                    <a href="#" className="hover:text-red-600">Sobre</a>
-                    <a href="#" className="hover:text-red-600">Serviços</a>
-                    <a href="#" className="hover:text-red-600">Contato</a>
+                    <a href="#trajetoria" className="hover:text-red-600">Trajetória</a>
+                    <a href="#projetos" className="hover:text-red-600">Portfólio</a>
+                    <a href="contato" className="hover:text-red-600">Contato</a>
                     <Button onClick={toggleMode}>
                         {mode ? <Moon size={40} /> : <SunMedium size={40}/> }
                     </Button>

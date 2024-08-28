@@ -3,12 +3,13 @@ import Header from "../../components/Header";
 import Button from "../../components/Button";
 import Section from "../../components/Section";
 import Title from "../../components/Title";
+import ProgressBar from "../../components/ProgressBar";
+import TimeLine from "../../components/TimeLine";
 import Curriculo from "../../assets/CurriculoAlexandreRibeiro.pdf";
 import Perfil from "../../assets/perfil.jpg"
 import { Download, Github, Linkedin, Mail } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import ProgressBar from "../../components/ProgressBar";
 
 const Home = () => {
   const [homeClass, setHomeClass] = useState('w-full custom-gradient-dark py-[24px]');
@@ -19,7 +20,7 @@ const Home = () => {
       <Section>
           <div className="flex flex-col gap-[24px] max-w-[644px] lg:w-1/2 justify-center xl:mr-auto">
             <h2 className="text-5xl font-bold">Alexandre Ribeiro</h2>
-            <p className="font-normal text-xl">Com uma paixão pela criação de soluções inovadoras e impactantes. Com facilidade em me comunicar e trabalhar em equipe, gosto de compartilhar meus conhecimentos e aprender com os outros. Minha jornada profissional até o momento tem sido marcada por uma busca incansável por desafios empolgantes e oportunidades de crescimento.</p>
+            <p className="font-normal text-xl text-justify">Com uma paixão pela criação de soluções inovadoras e impactantes. Com facilidade em me comunicar e trabalhar em equipe, gosto de compartilhar meus conhecimentos e aprender com os outros. Minha jornada profissional até o momento tem sido marcada por uma busca incansável por desafios empolgantes e oportunidades de crescimento.</p>
             <div className="flex flex-wrap gap-[16px]">
               <Button className="px-[20px]">
                 <a className="flex gap-x-3" href={Curriculo} download>
@@ -53,8 +54,20 @@ const Home = () => {
         </div>
       </Section>
       <Section>
-        <div className="w-full flex flex-col gap-[2rem]">
-          <Title content="Formação" />
+        <div id="trajetoria" className="w-full flex flex-col gap-[3rem]">
+          <div className="w-full flex flex-col gap-[1.5rem]">
+            <Title content="Formação" />
+            <TimeLine quant={2} label={["Etec de Carapicuíba", "Fatec Santana de Parnaíba"]}/>
+          </div>
+          <div className="w-full flex flex-col gap-[1.5rem]">
+            <Title content="Experiência Profissional" />
+            <TimeLine quant={1} label={["Estagiário - Inova Startup Prefeitura Santana de Parnaíba"]}/>
+          </div>
+        </div>
+      </Section>
+      <Section>
+        <div id="projetos" className="w-full flex flex-col gap-[3rem]">
+            <Title content="Projetos" />
         </div>
       </Section>
     </div>

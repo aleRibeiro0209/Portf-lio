@@ -9,7 +9,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ label, percent }) => {
   return (
     <div className="w-full flex gap-4">
       <div className={className + percent}></div>
-      <span className="w-[20%] flex justify-end font-medium">{label}</span>
+      <span className="w-[20%] flex justify-end font-medium text-[1rem] md:text-[1.5rem] items-center">{label}</span>
     </div>
   );
 };
