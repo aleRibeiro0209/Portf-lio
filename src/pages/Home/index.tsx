@@ -1,18 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import Button from "../../components/Button";
 import Section from "../../components/Section";
 import Title from "../../components/Title";
 import ProgressBar from "../../components/ProgressBar";
 import TimeLine from "../../components/TimeLine";
-import Curriculo from "../../assets/CurriculoAlexandreRibeiro.pdf";
-import Perfil from "../../assets/perfil.jpg"
+import Card from "../../components/Card";
+import Curriculo from "../../assets/CurrículoAlexandreRibeirodosSantos.pdf";
+import Perfil from "../../assets/perfil.jpg";
+import PorschePage from "../../assets/porche-page.png";
+import AccessyPage from "../../assets/projeto-accessy.png";
+import LealCode from "../../assets/lealcode.png";
 import { Download, Github, Linkedin, Mail } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 const Home = () => {
   const [homeClass, setHomeClass] = useState('w-full custom-gradient-dark py-[24px]');
+  const [cardClass, setCardClass] = useState('');
+
+  useEffect (() => {
+    cardClass === "bg-[#68090B] shadow-[0_0_15px_#FFCBC340]" ? setCardClass("bg-[#FFCBC3] shadow-[0_0_15px_#68090B60]") : setCardClass("bg-[#68090B] shadow-[0_0_15px_#FFCBC340]");
+  }, [homeClass]);
 
   return (
     <div className={homeClass}>
@@ -68,6 +77,11 @@ const Home = () => {
       <Section>
         <div id="projetos" className="w-full flex flex-col gap-[3rem]">
             <Title content="Projetos" />
+            <div className="w-full flex flex-wrap justify-center gap-8">
+              <Card mode={cardClass} src={PorschePage} title="/projeto-porsche" desc="Projeto da página da Porsche onde o usuário pode trocar a cor e a roda da sua porsche."/>
+              <Card mode={cardClass} src={AccessyPage} title="/Accessy" desc="Plataforma de busca e capacitação profissional com acessibilidade para pessoas com deficiência."/>
+              <Card mode={cardClass} src={LealCode} title="/lealcode.api" desc="LealCode.API é uma API RESTful desenvolvida em PHP com a arquitetura MVC (Model-View-Controller). Esta API foi projetada para gerenciar o estoque de uma rede de agências de carros."/>
+            </div>
         </div>
       </Section>
     </div>
